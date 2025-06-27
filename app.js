@@ -1,5 +1,5 @@
 import express from 'express';
-import router from './src/routes/movie.routes.js';
+import routerMovies from './src/routes/movie.routes.js';
 import { startBD } from './src/config/database.js';
 
 import 'dotenv/config'
@@ -11,7 +11,7 @@ const PORT = process.env.PORT;
 app.use(express.json());
 
 //middleware
-app.use('/api', router)
+app.use('/api', routerMovies)
 
 app.listen(PORT, async () => {
     await startBD(),
