@@ -10,6 +10,7 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
+//middleware
 app.use('/api', router)
 
 app.listen(PORT, async () => {
